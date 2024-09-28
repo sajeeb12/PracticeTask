@@ -1,0 +1,12 @@
+tbody {
+    counter-reset: rowNumber; /* Initialize counter */
+}
+
+tr {
+    counter-increment: rowNumber; /* Increment counter for each row */
+}
+
+tr td:first-child::before {
+    content: counter(rowNumber)". "; /* Display counter */
+    /* margin-right: 4px; Add some space after the number */
+}
